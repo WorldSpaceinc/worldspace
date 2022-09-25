@@ -63,7 +63,7 @@ class Slider extends Component<{}, {
                           opacity: style.o
                         }}
                       >
-                        V R S
+                        WorldSpace
                       </h2>
                     )}
                   </Motion>
