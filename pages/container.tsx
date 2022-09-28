@@ -1,7 +1,5 @@
+import { THREE } from "../utils/three";
 
-
-
-export default container(){
 var getContentFromMyOBJ = function (fileName, callback) {
   var myObjs = _.filter(ctx().scene.files.assets(), function (file) {
     return file.getName() === fileName && file.getFileType() === ".myobj";
@@ -118,4 +116,8 @@ var continueImport = function (err, content) {
     });
 };
 
-getContentFromMyOBJ("Sphere", continueImport)
+getContentFromMyOBJ("Sphere", continueImport);
+function ctx() {
+  throw new Error("Function not implemented.");
+}
+
