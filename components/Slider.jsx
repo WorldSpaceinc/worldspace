@@ -4,18 +4,15 @@ import { Motion, spring } from "react-motion";
 
 import ShowBox from "./ShowBox";
 import Footer from "./Footer";
-import { THREE } from "../utils/three";
+import { THREE } from "./utils/three";
 
-const Page = ({ children, fixed }: { children: JSX.Element | JSX.Element[]; fixed?: boolean }) => (
+const Page = ({ children, fixed }) => (
   <div className={`slider-item ${fixed ? "fixed" : "relative slide"}`}>
     {children}
   </div>
 );
 
-class Slider extends Component<{}, {
-  offset: number;
-}> {
-  isMobi;
+class Slider extends Component(offset = Mobi){
 
   constructor(props) {
     super(props);
@@ -25,8 +22,8 @@ class Slider extends Component<{}, {
     this.scrollHandler = this.scrollHandler.bind(this);
   }
   componentDidMount() {
-    (window as any).scrollHandlers = (window as any).scrollHandlers || [];
-    (window as any).scrollHandlers.push(status => this.scrollHandler(status));
+    (window ).scrollHandlers = (window).scrollHandlers || [];
+    (window ).scrollHandlers.push(status => this.scrollHandler(status));
 
     this.isMobi =
       window.DeviceOrientationEvent && /Mobi/.test(navigator.userAgent);
@@ -47,7 +44,7 @@ class Slider extends Component<{}, {
     return (
       <div>
         <div className="slider-container">
-          <Page>
+          <Page fixed={undefined}>
             <div className="absolute w-100 vh-100">
               <article className="vh-100 dt w-100">
                 <div className="dtc v-mid tc white ph3 ph4-l">

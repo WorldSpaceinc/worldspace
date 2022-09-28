@@ -3,13 +3,11 @@
  */
 
 import { Component } from 'react'
-import { THREE } from "../utils/three";
+import { THREE } from "./utils/three";
 
-export default class ShowBox extends Component<{
-  width: number;
-  height: number;
-  composer: () => void;
-}> {
+export default class ShowBox extends Component(
+  width, height, composer
+) {
   stop;
   renderer;
   canvas;

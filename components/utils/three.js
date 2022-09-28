@@ -1,4 +1,4 @@
-(global as any).THREE = require("three/build/three");
+global.THREE = require("three/build/three.mjs");
 
 // three.js polyfills...shit!
 require("three/examples/js/Mirror");
@@ -38,6 +38,6 @@ require("three/examples/js/postprocessing/UnrealBloomPass");
 require("three/examples/js/controls/OrbitControls");
 require("three/examples/js/controls/DeviceOrientationControls");
 
-const THREE = (global as any).THREE;
+const THREE = global.THREE;
 
 export { THREE }

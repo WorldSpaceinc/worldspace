@@ -1,7 +1,7 @@
-import type { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Layout from "../../components/Layout";
 import Editor from "../../components/Editor";
-import { fetchData } from "../../utils/fetchData";
+import { fetchData } from "../../components/utils/fetchData";
 
 function Model({ details }) {
   return (
@@ -11,8 +11,8 @@ function Model({ details }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (props) => {
-  const details = await fetchData(props.params.id as string);
+export const getStaticProps=async (props) => {
+  const details = await fetchData(props.params.id);
 
   return {
     props: {
@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const docs = await fetchData();
 
   return {

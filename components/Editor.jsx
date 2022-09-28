@@ -7,7 +7,7 @@ import Router from "next/router";
 import dynamic from "next/dynamic"
 import throttle from "lodash/throttle";
 
-import { THREE } from "../utils/three";
+import { THREE } from "./utils/three";
 import { useCartContext } from "../context/CartContext";
 const EditorSidebar = dynamic(() => import("./EditorSidebar"));
 
@@ -231,7 +231,7 @@ class Editor extends Component<{
     if (this.isMob) {
       controls = new THREE.DeviceOrientationControls(camera);
     } else {
-    
+
     controls = new THREE.OrbitControls(camera, this.canvas);
     controls.enableZoom = true;
     controls.enablePan = false;

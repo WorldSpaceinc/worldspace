@@ -2,13 +2,12 @@ import { Component } from 'react'
 import { ChromePicker } from 'react-color'
 import ClickOutside from 'react-click-outside'
 
-export default class extends Component<{
-  changeColor: (x: string, index: number) => void;
-  data: { name: string; uuid: string; colors: Array<any>; refractionRatios: Array<any>; shininesses: Array<any>; textures: Array<any> };
-}, {
-  colorPicker: Boolean[];
-  currColor: string[];
-}> {
+export default class extends Component(
+  changeColor,
+  data,
+  colorPicker,
+  currColor,
+) {
   constructor(props) {
     super(props)
 

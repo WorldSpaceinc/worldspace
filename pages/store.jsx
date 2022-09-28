@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
-import { fetchData } from "../utils/fetchData";
+import { fetchData } from "../components/utils/fetchData";
 
 function Store({ products }) {
   return (

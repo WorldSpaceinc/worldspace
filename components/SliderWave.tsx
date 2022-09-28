@@ -5,7 +5,7 @@
 import { Component } from 'react'
 import 'react-dom'
 import throttle from 'lodash/throttle'
-import { THREE } from "../utils/three";
+import { THREE } from "./utils/three";
 
 const PI_2 = Math.PI * 2
 const X_CNT = 30, Y_CNT = 30, SCALE = 200
